@@ -5,9 +5,10 @@ function volume_sphere(e) {
 	const volume= document.querySelector("#volume");
 	if(parseInt(radius.value)<0) {
 		volume.value= NaN;
-		return;
+		return volume.value;
 	}
 	volume.value= (4/3)*(Math.PI)*(radius.value**3);
+	return volume.value;
 } 
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
