@@ -7,8 +7,14 @@ function volume_sphere(e) {
 		volume.value= NaN;
 		return volume.value;
 	}
-	volume.value= (4/3)*(Math.PI)*(radius.value**3);
+	volume.value= (4/3)*(Math.PI)*(radius.value**3).toFixed(4);
+	volume.value= parseFloat(volume.value).toFixed(4);
 	return volume.value;
 } 
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+
+
+
+
+
